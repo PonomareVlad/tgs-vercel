@@ -1,6 +1,6 @@
 {
-  "installCommand": "pip install -U git+https://github.com/PonomareVlad/python-lottie.git && ls && lottie_convert.py",
-  "buildCommand": "pip install -U git+https://github.com/PonomareVlad/python-lottie.git && ls && lottie_convert.py",
+  "installCommand": "pip install -U git+https://github.com/PonomareVlad/python-lottie.git && ls",
+  "buildCommand": "pip install -U git+https://github.com/PonomareVlad/python-lottie.git && ls",
   "outputDirectory": ".",
   "public": true,
   "github": {
