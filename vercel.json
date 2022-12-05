@@ -1,4 +1,5 @@
 {
+  "buildCommand": "install.sh",
   "installCommand": "install.sh",
   "rewrites": [
     {
