@@ -1,4 +1,4 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler
 from lottie.exporters.core import export_tgs
 from lottie.importers.svg import import_svg
 import cgi
@@ -10,14 +10,7 @@ tgs_path = '/tmp/sticker.svg'
 class handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
-        self.send_response(200)
-        self.send_header('Content-type', 'text/html')
-        self.end_headers()
-        self.wfile.write(str('<form method="post" enctype="multipart/form-data">'
-                             '<input type="file" name="file">'
-                             '<button>POST</button>'
-                             '</form>').encode())
-        return
+        return self.send_error(405)
 
     def do_POST(self):
         form = cgi.FieldStorage(
@@ -37,6 +30,5 @@ class handler(BaseHTTPRequestHandler):
             export_tgs(animation, tgs_path, True, True)
             self.wfile.write(open(tgs_path, 'rb').read())
         else:
-            self.send_response(400)
-            self.end_headers()
+            self.send_error(415)
         return
