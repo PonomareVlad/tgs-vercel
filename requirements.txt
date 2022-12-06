@@ -1,1 +1,1 @@
--e git+https://github.com/PonomareVlad/python-lottie.git@c057c95d6bd0df79e5d9021c281afdaddf3bf611#egg=lottie
+lottie @ git+https://github.com/PonomareVlad/python-lottie.git@c057c95d6bd0df79e5d9021c281afdaddf3bf611
