@@ -1,1 +1,1 @@
-lottie-ps==0.7.0
+lottie-ps
